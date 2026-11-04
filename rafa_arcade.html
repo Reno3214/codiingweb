@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101426">
+<title>Rafa Arcade — Game Zone</title>
+<style>
+:root{--bg:#0b1020;--panel:#151d35;--panel2:#1b2745;--text:#f3f6ff;--muted:#a9b4d0;--cyan:#55e6df;--purple:#a78bfa;--pink:#ff79b8;--line:#2b385c}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#20265a 0,transparent 38%),radial-gradient(ellipse at 90% 20%,#183c50 0,transparent 32%),var(--bg);font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);min-height:100vh}
+.wrap{width:min(1080px,92%);margin:auto}header{border-bottom:1px solid #ffffff18;background:#0b1020cc;backdrop-filter:blur(12px);position:sticky;top:0;z-index:3}.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.04em}.mark{width:39px;height:39px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,var(--cyan),var(--purple));color:#101426;font-size:21px}nav{display:flex;gap:20px}nav a{color:var(--muted);text-decoration:none;font-size:.92rem}nav a:hover{color:var(--cyan)}
+.hero{padding:65px 0 48px}.hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.pill{display:inline-block;padding:6px 11px;border:1px solid #55e6df55;border-radius:99px;color:var(--cyan);font-size:.76rem;font-weight:800;letter-spacing:.12em}h1{font-size:clamp(2.6rem,7vw,5rem);line-height:.98;letter-spacing:-.055em;margin:18px 0}h1 span{background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));background-clip:text;color:transparent}.intro{color:var(--muted);font-size:1.06rem;max-width:570px}.owner{padding:25px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#1c2a4cdd,#151a31dd);box-shadow:0 20px 65px #0005}.owner small{color:var(--cyan);font-weight:800;letter-spacing:.12em}.owner h2{font-size:2rem;margin:8px 0 3px}.owner p{color:var(--muted);margin:0}.owner-icon{font-size:2.5rem;margin-bottom:8px}
+main{padding:15px 0 65px}.section-title{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:15px 0 20px}.section-title h2{font-size:1.65rem;margin:0}.section-title p{color:var(--muted);margin:3px 0 0;font-size:.92rem}
+.games{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.game{border:1px solid var(--line);border-radius:19px;background:linear-gradient(155deg,#1a2543,#11182c);padding:19px;display:flex;flex-direction:column;min-height:235px;transition:.2s}.game:hover{transform:translateY(-4px);border-color:#55e6df88}.game-icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:1.8rem;background:#ffffff12}.game h3{margin:14px 0 5px}.game p{margin:0 0 18px;color:var(--muted);font-size:.9rem}.play{margin-top:auto;border:0;border-radius:11px;padding:11px 14px;background:linear-gradient(90deg,var(--cyan),#8bd9ff);color:#101426;font-weight:900;cursor:pointer}.play:hover{filter:brightness(1.08)}
+.panel{margin-top:23px;padding:22px;border:1px solid var(--line);border-radius:19px;background:#151d35}.panel h3{margin:0 0 8px}.panel p{color:var(--muted);margin:0}.game-area{display:none;margin-top:18px}.game-area.active{display:block}.game-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.game-top button,.secondary{border:1px solid var(--line);background:#202b49;color:var(--text);padding:9px 13px;border-radius:10px;cursor:pointer}.playbox{margin-top:15px;min-height:160px;padding:20px;border-radius:15px;background:#0c1326;border:1px solid #2b385c;text-align:center;display:grid;place-items:center}.playbox button{border:0;border-radius:10px;padding:12px 18px;background:var(--purple);color:#11152a;font-weight:900;cursor:pointer}.number{font-size:2rem;font-weight:900;letter-spacing:.08em}.field{padding:11px;border:1px solid var(--line);border-radius:10px;background:#111a30;color:var(--text);font:inherit;width:min(220px,100%)}
+footer{border-top:1px solid #ffffff18;padding:25px 0;color:var(--muted);font-size:.88rem}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.accent{color:var(--cyan)}
+@media(max-width:760px){.hero-inner{grid-template-columns:1fr}.games{grid-template-columns:1fr 1fr}.hero{padding-top:48px}}
+@media(max-width:520px){.nav{height:auto;padding:13px 0;align-items:flex-start;flex-direction:column}nav{width:100%;justify-content:space-between}.games{grid-template-columns:1fr}.section-title{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#" style="color:inherit;text-decoration:none"><span class="mark">✦</span> RAFA ARCADE</a>
+  <nav><a href="#home">Beranda</a><a href="#games">Permainan</a><a href="#owner">Owner</a></nav>
+</div></header>
+<section class="hero" id="home"><div class="wrap hero-inner">
+  <div><span class="pill">WELCOME TO THE GAME ZONE</span><h1>MAIN SERU.<br><span>MENANGKAN SKOR.</span></h1>
+  <p class="intro">Selamat datang di Rafa Arcade, tempat mini game seru untuk mengisi waktu. Pilih permainan favoritmu dan tantang skor terbaikmu!</p></div>
+  <aside class="owner" id="owner"><div class="owner-icon">🎮</div><small>WEBSITE OWNER</small><h2>RAFA</h2><p>Creator & Owner of Rafa Arcade</p></aside>
+</div></section>
+<main class="wrap" id="games">
+  <div class="section-title"><div><h2>🎯 Pilih Permainan</h2><p>Semua permainan bisa dimainkan langsung di halaman ini.</p></div></div>
+  <div class="games">
+    <article class="game"><div class="game-icon">🔢</div><h3>Tebak Angka</h3><p>Tebak angka rahasia dari 1 sampai 20 dengan jumlah percobaan terbatas.</p><button class="play" onclick="openGame('guess')">Main sekarang →</button></article>
+    <article class="game"><div class="game-icon">✊</div><h3>Batu Gunting Kertas</h3><p>Hadapi komputer dalam permainan klasik. Kumpulkan kemenanganmu!</p><button class="play" onclick="openGame('rps')">Main sekarang →</button></article>
+    <article class="game"><div class="game-icon">⚡</div><h3>Tes Refleks</h3><p>Uji kecepatan reaksimu. Klik secepat mungkin saat warna berubah.</p><button class="play" onclick="openGame('reflex')">Main sekarang →</button></article>
+  </div>
+  <section class="panel game-area" id="gameArea">
+    <div class="game-top"><div><h3 id="gameTitle">Permainan</h3><p id="gameDesc">Pilih permainan.</p></div><button onclick="closeGame()">Tutup ✕</button></div>
+    <div class="playbox" id="playbox"></div>
+  </section>
+  <section class="panel"><h3>🌟 Tentang Rafa Arcade</h3><p>Rafa Arcade adalah website mini game yang dibuat sebagai tempat hiburan sederhana. Website ini dimiliki oleh <strong class="accent">Rafa</strong>. Main dengan santai, jaga sportivitas, dan nikmati permainannya!</p></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 <strong>Rafa Arcade</strong>. All rights reserved.</span><span>Created with ✦ by <span class="accent">Rafa</span></span></div></footer>
+<script>
+const area=document.getElementById('gameArea'),box=document.getElementById('playbox'),title=document.getElementById('gameTitle'),desc=document.getElementById('gameDesc');
+let secret=0,tries=0,reflexTimer=null,startedAt=0,waiting=false;
+function openGame(which){area.classList.add('active');area.scrollIntoView({behavior:'smooth',block:'center'});
+ if(which==='guess'){title.textContent='🔢 Tebak Angka';desc.textContent='Masukkan tebakan angka 1–20. Kamu punya 5 kesempatan.';startGuess()}
+ if(which==='rps'){title.textContent='✊ Batu Gunting Kertas';desc.textContent='Pilih langkahmu dan lihat hasilnya.';startRps()}
+ if(which==='reflex'){title.textContent='⚡ Tes Refleks';desc.textContent='Tekan tombol saat berubah menjadi HIJAU.';startReflex()}
+}
+function closeGame(){area.classList.remove('active');clearTimeout(reflexTimer);waiting=false}
+function startGuess(){secret=Math.floor(Math.random()*20)+1;tries=0;box.innerHTML=`<div><p>Tebak angka rahasia!</p><input class="field" id="guessInput" type="number" min="1" max="20" placeholder="Angka 1–20"><button onclick="checkGuess()">Tebak</button><p id="guessMsg" aria-live="polite">Kesempatan: 5</p><button class="secondary" onclick="startGuess()">Ulangi</button></div>`}
+function checkGuess(){const input=document.getElementById('guessInput'),msg=document.getElementById('guessMsg'),n=Number(input.value);if(!Number.isInteger(n)||n<1||n>20){msg.textContent='Masukkan angka 1 sampai 20.';return}tries++;if(n===secret){msg.textContent=`🎉 Benar! Kamu berhasil dalam ${tries} percobaan.`;input.disabled=true}else if(tries>=5){msg.textContent=`Kesempatan habis! Angkanya ${secret}.`;input.disabled=true}else{msg.textContent=(n<secret?'Terlalu kecil!':'Terlalu besar!')+` Sisa kesempatan: ${5-tries}`}}
+function startRps(){box.innerHTML=`<div><p>Pilih salah satu:</p><div style="display:flex;gap:9px;justify-content:center;flex-wrap:wrap"><button onclick="playRps('Batu')">✊ Batu</button><button onclick="playRps('Gunting')">✌️ Gunting</button><button onclick="playRps('Kertas')">✋ Kertas</button></div><p id="rpsResult" aria-live="polite">Semoga beruntung!</p><button class="secondary" onclick="startRps()">Reset</button></div>`}
+function playRps(user){const opts=['Batu','Gunting','Kertas'],cpu=opts[Math.floor(Math.random()*3)];let result=user===cpu?'Seri!':((user==='Batu'&&cpu==='Gunting')||(user==='Gunting'&&cpu==='Kertas')||(user==='Kertas'&&cpu==='Batu'))?'Kamu menang! 🎉':'Komputer menang!';document.getElementById('rpsResult').textContent=`Kamu: ${user} · Komputer: ${cpu} — ${result}`}
+function startReflex(){clearTimeout(reflexTimer);waiting=false;box.innerHTML=`<div><p id="reflexMsg">Tekan MULAI, lalu tunggu warna berubah.</p><button id="reflexBtn" onclick="reflexClick()">MULAI</button></div>`}
+function reflexClick(){const b=document.getElementById('reflexBtn'),m=document.getElementById('reflexMsg');if(!waiting){if(b.dataset.phase==='wait'){m.textContent='Terlalu cepat! Coba lagi.';b.dataset.phase='';b.textContent='Coba lagi';return}waiting=true;b.dataset.phase='wait';b.disabled=true;b.textContent='Tunggu...';m.textContent='Jangan klik dulu!';reflexTimer=setTimeout(()=>{if(!waiting)return;startedAt=performance.now();b.disabled=false;b.style.background='#55e6a5';b.textContent='KLIK SEKARANG!';b.dataset.phase='go';m.textContent='Sekarang!'},1000+Math.random()*3000)}else if(b.dataset.phase==='go'){const ms=Math.round(performance.now()-startedAt);waiting=false;b.dataset.phase='';b.style.background='';b.textContent='Main lagi';m.textContent=`⚡ Waktu reaksimu: ${ms} ms`;}}
+</script>
+</body>
+</html>
